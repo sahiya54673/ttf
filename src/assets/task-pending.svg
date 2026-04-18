@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-label="Pending task">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="104" height="104" rx="26" fill="url(#g1)" stroke="#f59e0b" stroke-width="4"/>
+  <circle cx="60" cy="60" r="26" fill="#fff8db" stroke="#f59e0b" stroke-width="4"/>
+  <line x1="60" y1="60" x2="60" y2="44" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
+  <line x1="60" y1="60" x2="74" y2="60" stroke="#b45309" stroke-width="5" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color-scheme: light;
+  color: #1f2937;
+  background-color: #f8fafc;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 10% 15%, rgba(255, 99, 146, 0.32) 0%, transparent 36%),
+    radial-gradient(circle at 90% 12%, rgba(56, 189, 248, 0.28) 0%, transparent 34%),
+    radial-gradient(circle at 82% 84%, rgba(167, 139, 250, 0.3) 0%, transparent 35%),
+    radial-gradient(circle at 15% 86%, rgba(52, 211, 153, 0.24) 0%, transparent 32%),
+    linear-gradient(135deg, #fff7ed 0%, #fdf4ff 38%, #ecfeff 72%, #eef2ff 100%);
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: -20%;
+  pointer-events: none;
+  z-index: -2;
+  opacity: 0.65;
+  filter: blur(44px) saturate(1.2);
+  background:
+    conic-gradient(from 40deg at 30% 40%, rgba(244, 114, 182, 0.45), rgba(96, 165, 250, 0.38), rgba(52, 211, 153, 0.28), rgba(244, 114, 182, 0.45)),
+    conic-gradient(from 200deg at 70% 65%, rgba(129, 140, 248, 0.35), rgba(251, 146, 60, 0.25), rgba(45, 212, 191, 0.32), rgba(129, 140, 248, 0.35));
+  animation: auroraShift 24s ease-in-out infinite alternate;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.25;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.22) 1px, transparent 1px);
+  background-size: 38px 38px;
+  mask-image: radial-gradient(circle at center, black 25%, transparent 85%);
+}
+
+@keyframes auroraShift {
+  0% {
+    transform: translate3d(-4%, -2%, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate3d(4%, 2%, 0) rotate(14deg) scale(1.06);
+  }
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding-bottom: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.8);
+}
